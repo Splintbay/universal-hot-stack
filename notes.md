@@ -11,3 +11,7 @@
 
 ## React
 - PropTypes enables prop validation during development, to ensure that props are used correctly
+
+## Babel
+- stage: enables ES7 features
+- loose: all -> makes code faster but less spec compliant

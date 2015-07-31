@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "./node_modules/.bin/babel-node ./src/server.js --stage 0"
+    "start": "./node_modules/.bin/babel-node ./src/server.js"
   },
   "author": "Skage Spjelkavik",
   "license": "None"
