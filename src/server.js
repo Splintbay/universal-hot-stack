@@ -1,20 +1,23 @@
 import express from 'express';
 import React from 'react';
+import Router from "react-router";
+import routes from './views/routes';
 import serveStatic from 'serve-static';
 import path from 'path';
 
 import config from './config';
 import api from './api/api';
 import Html from './html';
-import Hello from './hello';
 
 const app = new express();
 
 app.use(serveStatic(path.join(__dirname, '..', 'static')));
 
-app.get('/', (req, res) => {
-  res.send('<!doctype html>\n' +
-      React.renderToString(<Html component={<Hello />}/>));
+app.use((req, res) => {
+  Router.run(routes, req.url, Handler => {
+   res.send('<!doctype html>\n' +
+       React.renderToString(<Html component={<Handler />}/>));
+ });
 });
 
 if(config.port){
