@@ -1,11 +1,16 @@
 import express from 'express';
 import React from 'react';
+import serveStatic from 'serve-static';
+import path from 'path';
+
 import config from './config';
 import api from './api/api';
 import Html from './html';
 import Hello from './hello';
 
 const app = new express();
+
+app.use(serveStatic(path.join(__dirname, '..', 'static')));
 
 app.get('/', (req, res) => {
   res.send('<!doctype html>\n' +

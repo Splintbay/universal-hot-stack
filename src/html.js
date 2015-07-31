@@ -15,6 +15,7 @@ export default class Html extends Component {
            <title>{title}</title>
 
            <link rel="shortcut icon" href="/favicon.ico" />
+           <script src="http://localhost:3001/dist/bundle.js"></script>
         </head>
         <body>
            <div id="content" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>
