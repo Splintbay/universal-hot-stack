@@ -1,0 +1,16 @@
+{
+  "name": "UniversalHotStack",
+  "version": "0.0.0",
+  "description": "A Universal stack with hot loading using React, Flux and node.js.",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^5.8.19",
+    "express": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node ./src/server.js"
+  },
+  "author": "Skage Spjelkavik",
+  "license": "None"
+}
