@@ -14,6 +14,7 @@ const app = new express();
 app.use(serveStatic(path.join(__dirname, '..', 'static')));
 
 app.use((req, res) => {
+  console.info('Request for %s received', req.path);
   Router.run(routes, req.url, Handler => {
    res.send('<!doctype html>\n' +
        React.renderToString(<Html component={<Handler />}/>));
