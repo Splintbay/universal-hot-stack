@@ -8,3 +8,6 @@
 
 ## Webpack
 - Allows module loading, and bundling.
+
+## React
+- PropTypes enables prop validation during development, to ensure that props are used correctly
