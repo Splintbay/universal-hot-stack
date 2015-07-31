@@ -1,12 +1,7 @@
-import Express from 'express';
+import express from 'express';
+import config from './config';
 
-const app = new Express();
-const config = {
-  port: 3000,
-  app: {
-    name: "Universal Hot Stack"
-  }
-};
+const app = new express();
 
 app.get('/', (req, res) => {
   res.send("Hello world!");
