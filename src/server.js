@@ -1,5 +1,6 @@
 import express from 'express';
 import config from './config';
+import api from './api/api';
 
 const app = new express();
 
@@ -12,8 +13,10 @@ if(config.port){
     if(err) {
       console.log(err);
     } else {
-      console.info('==> Server is listening');
-      console.info('==> %s running on port %s', config.app.name, config.port);
+      api().then(() => {
+        console.info('==> Server is listening');
+        console.info('==> %s running on port %s, API on port %s', config.app.name, config.port, config.apiPort);
+      });
     }
   });
 }
